@@ -1,0 +1,1077 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Iluminus Photography</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Poppins:wght@300;400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,400..700,0..100,0..1;1,9..144,400..700,0..100,0..1&display=swap">
+<style>
+/* Layout: white page, split intro (text left, photo right), colour sections as rounded panels inset from the edges.
+   Playful print-shop look: flat bright inks (sun, coral, cobalt, lilac, mint), ink outlines, offset "misprint" shadows, stickers.
+   Deliberate single light theme (the site is white by request). */
+:root{
+  --bg:#FFFFFF; --ink:#1A1A2E; --muted:#625F78; --line:#ECEAF3; --field:#D9D6E4;
+  --sun:#FFD23F; --coral:#FF6B57; --coral-ink:#E0442E; --cobalt:#2E5BFF; --lilac:#DCD0FF; --mint:#A8EBCF; --orange:#FF9F43;
+  --board:#F5F2FF; --dot:#DCD4F5; --err:#C4262E;
+  --f-display:"Fraunces",Georgia,"Times New Roman",serif;
+  --f-body:"Poppins","Segoe UI",system-ui,-apple-system,sans-serif;
+  --r-lg:28px; --r-md:18px;
+  --wrap:74rem;
+  color-scheme:light;
+}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:clip}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--bg)}
+h1,h2,h3{font-family:var(--f-display);font-weight:600;line-height:1;letter-spacing:-.02em;text-wrap:balance;margin:0;font-variation-settings:"SOFT" 100,"WONK" 0}
+h1 em,h2 em,h3 em,.pull em{font-style:italic;font-weight:500;color:var(--coral-ink);font-variation-settings:"SOFT" 100,"WONK" 1}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--cobalt);outline-offset:3px}
+[tabindex="-1"]:focus{outline:none}
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+@media (min-width:760px){.wrap{padding-left:max(48px,env(safe-area-inset-left,0px));padding-right:max(48px,env(safe-area-inset-right,0px))}}
+
+/* Stickers and pills */
+.pill{display:inline-flex;align-items:center;min-height:32px;padding:6px 14px;border-radius:18px;border:2px solid var(--ink);background:#fff;font:600 .7rem/1.3 var(--f-body);letter-spacing:.12em;text-transform:uppercase;color:var(--ink)}
+.p-lilac{background:var(--lilac)} .p-mint{background:var(--mint)} .p-sun{background:var(--sun)} .p-coral{background:var(--coral)} .p-orange{background:var(--orange)} .p-cobalt{background:var(--cobalt)}
+
+/* Logo: wordmark + sun dot */
+.logo{display:inline-flex;align-items:baseline;font:600 1.65rem/1 var(--f-display);font-variation-settings:"SOFT" 100,"WONK" 1;letter-spacing:-.02em;color:inherit;white-space:nowrap}
+@media (min-width:760px){.logo{font-size:1.9rem}}
+.glow{display:inline-block;flex:none;width:.24em;height:.24em;margin-left:.06em;border-radius:50%;background:var(--sun);border:.05em solid var(--ink)}
+.logo-lock{display:inline-flex;flex-direction:column;align-items:center;gap:4px;text-decoration:none;color:var(--ink)}
+.logo-sub{font:600 .5rem/1 var(--f-body);letter-spacing:.46em;text-transform:uppercase;padding-left:.46em}
+
+/* Buttons and links */
+.btn{--sh:var(--sun);display:inline-flex;align-items:center;justify-content:center;gap:.6rem;min-height:52px;padding:0 1.6rem;border-radius:999px;border:2px solid var(--ink);background:var(--ink);color:#fff;font:500 .95rem/1 var(--f-body);text-decoration:none;cursor:pointer;box-shadow:4px 4px 0 var(--sh);transition:transform .15s ease,box-shadow .15s ease,background-color .15s ease}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--sh)}
+.btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--sh)}
+.btn-white{background:#fff;color:var(--ink)}
+.p-sun .btn,.p-mint .btn{--sh:var(--coral)}
+.text-link{display:inline-flex;align-items:center;min-height:44px;font:500 .98rem var(--f-body);color:var(--ink);text-decoration:underline wavy var(--coral);text-decoration-thickness:2px;text-underline-offset:8px}
+.text-link:hover{text-decoration-color:var(--cobalt)}
+
+/* WordPress block overlay */
+[data-wp]{position:relative}
+.site-head[data-wp]{position:sticky}
+.show-wp [data-wp]{outline:2px dashed var(--ink);outline-offset:-2px}
+.show-wp [data-wp]::after{content:attr(data-wp);position:absolute;top:6px;left:6px;z-index:6;font:500 11px/1.35 var(--f-body);background:var(--sun);color:var(--ink);border:1.5px solid var(--ink);border-radius:6px;padding:3px 8px;pointer-events:none;max-width:calc(100% - 12px)}
+
+/* Header */
+.site-head{top:env(safe-area-inset-top,0px);z-index:20;background:rgba(255,255,255,.94);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.head-row{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:12px;min-height:80px}
+.menu-btn{justify-self:start;display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0 16px;border:2px solid var(--ink);border-radius:999px;background:#fff;color:var(--ink);font:600 .74rem var(--f-body);letter-spacing:.12em;text-transform:uppercase;cursor:pointer;box-shadow:3px 3px 0 var(--ink);transition:transform .15s ease,box-shadow .15s ease}
+.menu-btn:hover{transform:translate(-1px,-1px);box-shadow:4px 4px 0 var(--ink)}
+.menu-ico{display:grid;gap:4px;width:16px}
+.menu-ico i{display:block;height:2px;width:16px;background:currentColor;border-radius:2px}
+.menu-ico i:last-child{width:10px}
+.x{width:16px;height:16px}
+.socials{justify-self:end;display:none;gap:8px}
+.socials a{display:inline-flex;align-items:center;min-height:40px;padding:0 15px;border-radius:999px;border:2px solid var(--line);font:500 .8rem var(--f-body);text-decoration:none;transition:background-color .15s ease,border-color .15s ease}
+.socials a:hover{border-color:var(--ink);background:var(--sun)}
+@media (min-width:760px){.socials{display:flex}}
+
+/* Full-screen menu (WordPress: Navigation block, overlay menu "Always") */
+.menu{position:fixed;inset:0;z-index:40;background:var(--sun);color:var(--ink);padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);display:flex;flex-direction:column;overflow-y:auto;animation:pop .28s ease}
+.menu[hidden]{display:none}
+@keyframes pop{from{opacity:0;transform:scale(.985)}to{opacity:1;transform:none}}
+.menu .glow{background:var(--coral)}
+.menu-nav{flex:1;display:flex;flex-direction:column;justify-content:center;gap:.15rem;padding-block:2rem}
+.menu-nav a{display:inline-flex;align-items:center;gap:.4rem;width:fit-content;font:600 clamp(2.8rem,11vw,5.4rem)/1.14 var(--f-display);font-variation-settings:"SOFT" 100,"WONK" 1;letter-spacing:-.02em;text-decoration:none;transition:transform .2s ease}
+.menu-nav a:hover{transform:translateX(10px);font-style:italic}
+.menu-nav a[aria-current="page"]{font-style:italic}
+.menu-nav a .glow{width:.2em;height:.2em;opacity:0}
+.menu-nav a[aria-current="page"] .glow{opacity:1}
+.menu-foot{display:flex;flex-wrap:wrap;gap:.5rem 2rem;padding-block:1.5rem 2rem;border-top:2px solid var(--ink);font-size:.9rem;font-weight:500}
+
+/* Photos (placeholders drawn in canvas) */
+.ph{display:block;position:relative;overflow:hidden;background:#e4e1ec}
+.ph canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+
+/* Split intro (home, about, contact) */
+.hero{display:grid;gap:3rem;align-items:center;padding-block:clamp(2rem,6vw,4.5rem) clamp(3.5rem,8vw,6rem)}
+@media (min-width:900px){.hero{grid-template-columns:minmax(0,1.12fr) minmax(0,1fr);gap:4.5rem}}
+.hero.top{align-items:start}
+.hero-text{display:grid;justify-items:start;min-width:0;container-type:inline-size}
+.brand-name{display:grid;justify-items:start;font-size:clamp(3rem,10vw,5.5rem);font-size:clamp(3rem,22cqi,8.5rem);line-height:.88;letter-spacing:-.035em;margin:0 0 1.5rem;max-width:100%;font-variation-settings:"SOFT" 100,"WONK" 1}
+.brand-name .glow{width:.13em;height:.13em;margin-left:.05em;border-width:.035em}
+.bn-sub{font:600 clamp(.8rem,1.7vw,1.05rem)/1 var(--f-body);letter-spacing:.6em;text-transform:uppercase;margin-top:1rem;padding-left:.12em}
+.title{font-size:clamp(2.6rem,7vw,4.6rem);line-height:1.02;margin:1.2rem 0 1.4rem;max-width:13ch}
+.title .glow{width:.15em;height:.15em}
+.role{font:500 italic clamp(1.35rem,2.6vw,1.85rem)/1.3 var(--f-display);font-variation-settings:"SOFT" 100,"WONK" 1;letter-spacing:-.01em}
+mark{background:linear-gradient(transparent 56%,var(--sun) 56%,var(--sun) 94%,transparent 94%);color:inherit;padding:0 .1em}
+.blurb{font:300 .98rem/1.8 var(--f-body);color:var(--muted);max-width:44ch;margin-top:1rem}
+.hero-ctas{display:flex;flex-wrap:wrap;align-items:center;gap:1rem 1.75rem;margin-top:2.2rem}
+.mail-row{display:inline-flex;align-items:center;gap:.8rem;margin-top:2rem;min-height:48px;font:500 1.05rem var(--f-body);text-decoration:underline wavy var(--coral);text-decoration-thickness:2px;text-underline-offset:8px}
+.ico{width:22px;height:22px;flex:none}
+.portrait{position:relative;margin:0 14px 14px 0;min-width:0}
+.portrait .ph{aspect-ratio:4/5;border-radius:var(--r-lg);box-shadow:14px 14px 0 var(--cobalt)}
+.portrait.sh-coral .ph{box-shadow:14px 14px 0 var(--coral)}
+.sticker{position:absolute;top:-18px;right:-8px;z-index:2;display:grid;place-items:center;width:clamp(92px,20vw,112px);aspect-ratio:1;border-radius:50%;background:var(--mint);border:2px solid var(--ink);box-shadow:3px 3px 0 var(--ink);font:600 italic 1.3rem/1 var(--f-display);font-variation-settings:"SOFT" 100,"WONK" 1;transform:rotate(9deg)}
+
+/* Colour panels, inset from the page edges */
+.panel-outer{padding-left:max(10px,env(safe-area-inset-left,0px));padding-right:max(10px,env(safe-area-inset-right,0px));padding-block:clamp(.4rem,1.5vw,.9rem)}
+.panel{position:relative;max-width:96rem;margin-inline:auto;border-radius:clamp(24px,4vw,40px);padding-block:clamp(3.25rem,8vw,5.75rem);overflow:hidden}
+.panel.p-cobalt{color:#fff}
+.p-board{background-color:var(--board);background-image:radial-gradient(var(--dot) 1.4px,transparent 1.7px);background-size:22px 22px}
+.panel:not(.p-cobalt) h2 em{color:inherit}
+.band-title{text-align:center;font-size:clamp(2.6rem,7vw,4.6rem)}
+.p-cobalt .band-title em{color:var(--sun)}
+.band-sub{text-align:center;font-weight:300;margin:1rem auto 0;max-width:44ch}
+.p-cobalt .band-sub{color:rgba(255,255,255,.88)}
+.band-actions{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:1rem 2rem;margin-top:1.5rem;padding-inline:16px}
+.auto-btn{display:inline-flex;align-items:center;gap:.6rem;min-height:50px;padding:0 .5rem;border:0;background:none;color:rgba(255,255,255,.88);font:600 .74rem var(--f-body);letter-spacing:.12em;text-transform:uppercase;cursor:pointer}
+.auto-btn:hover{color:#fff}
+.auto-btn svg{width:15px;height:15px;flex:none}
+
+/* Carousel (WordPress: slider block plugin with loop + autoplay) */
+.carousel{position:relative;margin-top:1.25rem;--item:min(68vw,300px);--gap:26px}
+@media (min-width:760px){.carousel{--item:min(28vw,280px)}}
+@media (min-width:1100px){.carousel{--item:260px;--gap:30px}}
+.track{position:relative;display:flex;gap:var(--gap);overflow-x:auto;scroll-snap-type:x mandatory;padding-block:36px 42px;padding-inline:calc(50% - var(--item) / 2);scrollbar-width:none;overscroll-behavior-x:contain}
+.track::-webkit-scrollbar{display:none}
+.cap-item{--tilt:-2deg;flex:0 0 var(--item);scroll-snap-align:center;position:relative;display:block;border:0;padding:0;margin:0;background:none;border-radius:22px;cursor:zoom-in;opacity:.72;transform:scale(.93) rotate(var(--tilt));transition:transform .45s cubic-bezier(.3,1.4,.5,1),opacity .35s ease,box-shadow .35s ease}
+.cap-item:nth-child(even){--tilt:2deg}
+.cap-item.is-active{transform:scale(1.07) rotate(0deg);opacity:1;z-index:1;box-shadow:10px 10px 0 var(--sun)}
+.cap-item .ph{aspect-ratio:4/5;border-radius:22px;background:#1d2f8a}
+.cap-item .cap-label{position:absolute;left:50%;bottom:14px;transform:translateX(-50%);max-width:calc(100% - 24px);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding:7px 14px;border-radius:999px;border:2px solid var(--ink);background:#fff;color:var(--ink);font:500 .8rem/1.2 var(--f-body);opacity:0;transition:opacity .3s ease}
+.cap-item.is-active .cap-label,.cap-item:hover .cap-label,.cap-item:focus-visible .cap-label{opacity:1}
+.track.no-anim .cap-item,.track.no-anim .cap-label{transition:none}
+.arrow{position:absolute;top:50%;z-index:3;width:48px;height:48px;margin-top:-24px;border-radius:50%;border:2px solid var(--ink);background:#fff;color:var(--ink);display:grid;place-items:center;cursor:pointer;box-shadow:3px 3px 0 var(--ink);transition:transform .15s ease}
+.arrow:hover{transform:scale(1.07)}
+.arrow svg{width:18px;height:18px}
+.arrow.prev{left:12px}
+.arrow.next{right:12px}
+@media (min-width:760px){.arrow.prev{left:28px}.arrow.next{right:28px}}
+
+/* Services */
+.sec{padding-block:clamp(3.75rem,9vw,6.5rem)}
+.sec-head{display:grid;gap:1rem;justify-items:start;margin-bottom:2.75rem}
+.sec-title{font-size:clamp(2.5rem,6.5vw,4.2rem)}
+.svc-grid{display:grid;gap:3rem;grid-template-columns:1fr}
+@media (min-width:860px){.svc-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:2.5rem}}
+.svc{--sh:var(--coral);display:grid;gap:.7rem;align-content:start;justify-items:start;min-width:0}
+.svc:nth-child(2){--sh:var(--sun)}
+.svc:nth-child(3){--sh:var(--cobalt)}
+.svc .ph{width:calc(100% - 10px);aspect-ratio:3/2;border-radius:var(--r-md);margin-bottom:.9rem;box-shadow:10px 10px 0 var(--sh);transition:transform .25s ease,box-shadow .25s ease}
+.svc:hover .ph{transform:translate(-3px,-3px);box-shadow:13px 13px 0 var(--sh)}
+.svc h3{font-size:1.75rem}
+.svc p{font-weight:300;color:var(--muted)}
+.price{display:inline-flex;align-items:center;min-height:32px;padding:0 14px;border-radius:999px;border:2px solid var(--ink);background:var(--lilac);font:600 .8rem/1 var(--f-body);color:var(--ink)!important;margin-top:.35rem}
+
+/* Quote */
+.statement{padding-block:clamp(3.75rem,9vw,6.5rem)}
+.more{flex-wrap:wrap;gap:.25rem 2rem}
+
+/* Storitve page */
+.big.long{font-size:clamp(2.6rem,10vw,6rem);line-height:.98}
+.svc-list{display:grid;gap:clamp(3.5rem,8vw,6rem);padding-bottom:clamp(3.5rem,8vw,6rem)}
+.svc-row{--sh:var(--orange);--dot-c:var(--orange);display:grid;gap:2rem;align-items:center}
+.svc-row:nth-child(2){--sh:var(--sun);--dot-c:var(--sun)}
+.svc-row:nth-child(3){--sh:var(--cobalt);--dot-c:var(--lilac)}
+@media (min-width:860px){.svc-row{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:4.5rem}.svc-row:nth-child(even) .svc-media{order:2}}
+.svc-media{margin:0 14px 14px 0;min-width:0}
+.svc-media .ph{aspect-ratio:4/3;border-radius:var(--r-lg);box-shadow:14px 14px 0 var(--sh)}
+.svc-body{display:grid;gap:1rem;justify-items:start;min-width:0}
+.svc-body h2{font-size:clamp(2.1rem,5vw,3.3rem);line-height:1.02}
+.svc-body > p{font-weight:300;color:var(--muted);max-width:46ch;font-size:1.02rem}
+.incl{list-style:none;padding:0;margin:.25rem 0 0;display:grid;gap:.6rem}
+.incl li{display:flex;gap:.75rem;align-items:flex-start}
+.incl li::before{content:"";flex:none;width:.8rem;height:.8rem;margin-top:.42rem;border-radius:50%;background:var(--dot-c);border:2px solid var(--ink)}
+.svc-foot{display:flex;flex-wrap:wrap;align-items:center;gap:1rem 1.5rem;margin-top:.8rem}
+.price.lg{min-height:42px;padding:0 18px;font-size:.95rem}
+.steps{list-style:none;padding:0;margin:2.75rem 0 0;display:grid;gap:1.25rem;grid-template-columns:1fr}
+@media (min-width:600px){.steps{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (min-width:1000px){.steps{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.step{background:#fff;border:2px solid var(--ink);border-radius:var(--r-md);padding:1.4rem;box-shadow:4px 4px 0 var(--ink);display:grid;gap:.65rem;align-content:start}
+.step-n{display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:var(--sun);border:2px solid var(--ink);font:600 1rem/1 var(--f-body)}
+.step h3{font-size:1.45rem}
+.step p{font-weight:300;color:var(--muted)}
+.pull{max-width:50rem;margin:0 auto;text-align:center;display:grid;gap:1.2rem;justify-items:center}
+.qmark{display:grid;place-items:center;width:60px;height:60px;border-radius:50%;background:var(--sun);border:2px solid var(--ink);box-shadow:3px 3px 0 var(--ink);transform:rotate(-8deg)}
+.qmark svg{width:26px;height:26px}
+.pull p{font:500 clamp(1.75rem,4.2vw,2.75rem)/1.2 var(--f-display);font-variation-settings:"SOFT" 100,"WONK" 0;letter-spacing:-.015em;text-wrap:balance}
+.pull cite{font:600 .72rem/1 var(--f-body);font-style:normal;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.panel .pull cite{color:var(--ink)}
+.more{display:flex;justify-content:center;margin-top:1.75rem}
+
+/* CTA panel */
+.cta{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.75rem}
+.cta h2{font-size:clamp(2.2rem,5.5vw,3.8rem);max-width:14ch}
+
+/* About */
+.about-cols{display:grid;gap:1.25rem 3.5rem;padding-bottom:clamp(3rem,7vw,5rem)}
+.about-cols p{font-weight:300;font-size:1.02rem;color:#45425A}
+@media (min-width:760px){.about-cols{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.facts{display:grid;gap:2.25rem;margin-top:clamp(2.75rem,6vw,4rem);padding-top:clamp(2.25rem,5vw,3.25rem);border-top:2px solid var(--ink)}
+.facts ul{list-style:none;padding:0;margin:1rem 0 0;display:grid}
+.facts li{padding:.75rem 0;border-bottom:1.5px solid rgba(26,26,46,.18)}
+.facts li span{color:#4A4762}
+@media (min-width:700px){.facts{grid-template-columns:repeat(2,minmax(0,1fr));gap:3.5rem}}
+
+/* Projects: bright moodboard */
+.page-head{padding-block:clamp(2rem,6vw,4.5rem) clamp(2.25rem,5vw,3.5rem);display:grid;gap:1.1rem;justify-items:start}
+.head-line{display:flex;flex-wrap:wrap;align-items:center;gap:.75rem 1.25rem}
+.big{font-size:clamp(3.6rem,13vw,7.5rem);line-height:.9;letter-spacing:-.035em;font-variation-settings:"SOFT" 100,"WONK" 1}
+.big .glow{width:.12em;height:.12em;border-width:.03em}
+.tilt{transform:rotate(-6deg)}
+.lede{font-weight:300;color:var(--muted);max-width:46ch;font-size:1.02rem}
+.pgrid{display:grid;grid-template-columns:1fr;gap:38px 28px;padding-block:.5rem}
+@media (min-width:600px){.pgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (min-width:600px) and (max-width:959px){.pgrid .pitem:first-child{grid-column:span 2}.pgrid .pitem:first-child .ph{aspect-ratio:3/2}}
+@media (min-width:960px){.pgrid{grid-template-columns:repeat(3,minmax(0,1fr));gap:44px 34px}}
+.pitem{--sh:var(--coral);--tilt:-1.6deg;position:relative;display:flex;flex-direction:column;width:100%;border:2px solid var(--ink);padding:10px 10px 0;margin:0;background:#fff;border-radius:20px;cursor:zoom-in;text-align:left;font:inherit;color:var(--ink);box-shadow:8px 8px 0 var(--sh);transform:rotate(var(--tilt));transition:transform .35s cubic-bezier(.3,1.4,.5,1),box-shadow .3s ease}
+.pitem:nth-child(4n+2){--sh:var(--sun);--tilt:1.2deg}
+.pitem:nth-child(4n+3){--sh:var(--cobalt);--tilt:-.6deg}
+.pitem:nth-child(4n+4){--sh:var(--mint);--tilt:1.6deg}
+.pitem:hover,.pitem:focus-visible{transform:rotate(0deg) translate(-3px,-3px);box-shadow:11px 11px 0 var(--sh)}
+.pitem:nth-child(3n+1)::before{content:"";position:absolute;top:-14px;left:50%;z-index:2;width:90px;height:26px;margin-left:-45px;background:rgba(255,210,63,.85);transform:rotate(-5deg);pointer-events:none}
+.pitem .ph{aspect-ratio:4/5;border-radius:12px}
+.pitem .ph canvas{transition:transform .6s ease}
+.pitem:hover .ph canvas{transform:scale(1.04)}
+.pitem .cap-label{display:block;padding:.8rem .25rem .95rem;font:500 .9rem/1.3 var(--f-body)}
+
+/* Contact */
+.info-list{display:grid;gap:.5rem;margin-top:2rem}
+.info-row{display:flex;flex-wrap:wrap;align-items:center;gap:.9rem;min-height:52px;font:500 1.02rem var(--f-body);overflow-wrap:anywhere}
+.ico-bub{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;border:2px solid var(--ink);flex:none}
+.ico-bub .ico{width:20px;height:20px}
+.copy{min-height:34px;padding:0 13px;border-radius:999px;border:2px solid var(--ink);background:#fff;color:var(--ink);font:600 .7rem var(--f-body);letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:background-color .15s ease}
+.copy:hover{background:var(--sun)}
+.form-card{background:#fff;border:2px solid var(--ink);border-radius:var(--r-lg);padding:clamp(1.25rem,4vw,2.25rem);box-shadow:10px 10px 0 var(--cobalt);margin:0 10px 10px 0;min-width:0}
+.form{display:grid;gap:1.3rem;min-width:0}
+.row2{display:grid;gap:1.3rem}
+@media (min-width:560px){.row2{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.field{display:grid;gap:.4rem;min-width:0}
+.field label{font:600 .72rem/1.3 var(--f-body);letter-spacing:.1em;text-transform:uppercase;color:var(--ink)}
+.field input,.field select,.field textarea{font:400 16px/1.5 var(--f-body);color:var(--ink);background:#fff;border:2px solid var(--field);border-radius:14px;padding:.75rem .95rem;min-height:52px;width:100%;min-width:0;transition:border-color .15s ease,box-shadow .15s ease}
+.field select{cursor:pointer}
+.field textarea{min-height:8.5rem;resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--ink);box-shadow:3px 3px 0 var(--sun)}
+[aria-invalid="true"]{border-color:var(--err)!important}
+.err{font-size:.84rem;color:var(--err);font-weight:500}
+.err:empty{display:none}
+.check{display:flex;gap:.8rem;align-items:flex-start;font:400 .92rem/1.55 var(--f-body)!important;letter-spacing:0!important;text-transform:none!important;cursor:pointer}
+.check input{width:22px;height:22px;min-height:0;margin:.1rem 0 0;padding:0;flex:none;accent-color:var(--cobalt)}
+.form-foot{display:flex;flex-wrap:wrap;gap:1rem;align-items:center;justify-content:space-between;margin-top:.4rem}
+.small{font-size:.84rem;color:var(--muted);font-weight:300}
+.done{display:grid;gap:1.1rem;justify-items:start;background:var(--sun);border:2px solid var(--ink);border-radius:var(--r-lg);padding:2.25rem;box-shadow:10px 10px 0 var(--cobalt);margin:0 10px 10px 0}
+.done[hidden]{display:none}
+.done h2{font-size:2.4rem}
+.done .small{color:var(--ink)}
+.done .btn{--sh:var(--coral)}
+.faq{max-width:46rem;margin:2.5rem auto 0;display:grid;gap:14px;padding-inline:4px}
+.faq details{background:#fff;border:2px solid var(--ink);border-radius:18px;padding:0 1.2rem;box-shadow:4px 4px 0 var(--ink)}
+.faq summary{min-height:64px;display:flex;align-items:center;justify-content:space-between;gap:1rem;cursor:pointer;list-style:none;padding-block:.5rem;font:500 1.02rem var(--f-body)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";display:grid;place-items:center;width:32px;height:32px;border-radius:50%;border:2px solid var(--ink);background:var(--sun);font:500 1.2rem/1 var(--f-body);flex:none;transition:transform .2s ease}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{padding-bottom:1.2rem;color:var(--muted);font-weight:300}
+
+/* Footer */
+.site-foot{padding-block:3.5rem 2rem;margin-top:clamp(1rem,3vw,2rem)}
+.foot-inner{display:grid;gap:1.4rem;justify-items:center;text-align:center}
+.foot-links{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+.foot-links a{display:inline-flex;align-items:center;min-height:42px;padding:0 16px;border-radius:999px;border:2px solid var(--ink);background:#fff;font:500 .82rem var(--f-body);text-decoration:none;transition:background-color .15s ease,transform .15s ease}
+.foot-links a:hover{background:var(--sun);transform:rotate(-3deg)}
+.foot-bottom{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:.5rem 1.5rem;margin-top:2.5rem;padding-top:1.5rem;border-top:1px solid var(--line);color:var(--muted);font-size:.8rem;font-weight:300}
+.wp-toggle{min-height:40px;padding:0;border:0;background:none;color:var(--muted);font:500 .8rem var(--f-body);text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.wp-toggle:hover{color:var(--ink)}
+
+/* Lightbox */
+.lb{padding:0;border:2px solid var(--ink);border-radius:24px;background:#fff;color:var(--ink);width:min(1100px,calc(100vw - 40px));max-width:none;max-height:calc(100dvh - 40px);overflow:auto;box-shadow:10px 10px 0 var(--sun)}
+.lb::backdrop{background:rgba(26,26,46,.72);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px)}
+.lb .ph{aspect-ratio:3/2;width:100%;max-height:72dvh}
+.lb-cap{display:flex;gap:1rem;justify-content:space-between;align-items:flex-start;padding:1.2rem clamp(1rem,3vw,1.75rem) 1.5rem}
+.lb-cap > div{display:grid;gap:.4rem;min-width:0}
+.lb-cap h2{font-size:clamp(1.6rem,3.5vw,2.2rem)}
+.lb-cap p{color:var(--muted);font-weight:300;max-width:60ch}
+.lb-meta{font:600 .72rem/1.3 var(--f-body)!important;letter-spacing:.1em;text-transform:uppercase;color:var(--ink)!important}
+.lb-close{flex:none;min-height:44px;padding:0 1.1rem}
+
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important}}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+</svg>
+
+<header class="site-head" data-wp="Glava · Navigation (prekrivni meni) + Site Logo + Social Icons">
+  <div class="wrap head-row">
+    <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="menu">
+      <span class="mb-txt">Meni</span> <span class="menu-ico" aria-hidden="true"><i></i><i></i></span>
+    </button>
+    <a class="logo-lock" href="#domov" data-go="domov" aria-label="Iluminus Photography – domov"><span class="logo">iluminus<span class="glow" aria-hidden="true"></span></span><span class="logo-sub" aria-hidden="true">Photography</span></a>
+    <div class="socials">
+      <a href="#" data-noop>Instagram</a>
+      <a href="#" data-noop>Facebook</a>
+    </div>
+  </div>
+</header>
+
+<div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Meni" hidden>
+  <div class="wrap head-row">
+    <button class="menu-btn" id="menuClose" type="button">
+      <span class="mb-txt">Zapri</span> <svg class="x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg>
+    </button>
+    <span class="logo-lock"><span class="logo">iluminus<span class="glow" aria-hidden="true"></span></span><span class="logo-sub" aria-hidden="true">Photography</span></span>
+    <span></span>
+  </div>
+  <nav class="wrap menu-nav" aria-label="Glavna navigacija">
+    <a href="#domov" data-go="domov">Domov<span class="glow" aria-hidden="true"></span></a>
+    <a href="#o-meni" data-go="o-meni">O meni<span class="glow" aria-hidden="true"></span></a>
+    <a href="#storitve" data-go="storitve">Storitve<span class="glow" aria-hidden="true"></span></a>
+    <a href="#projekti" data-go="projekti">Projekti<span class="glow" aria-hidden="true"></span></a>
+    <a href="#kontakt" data-go="kontakt">Kontakt<span class="glow" aria-hidden="true"></span></a>
+  </nav>
+  <div class="wrap">
+    <div class="menu-foot">
+      <span>info@iluminus.example</span>
+      <span>040 000 000</span>
+      <span>Instagram · Facebook</span>
+    </div>
+  </div>
+</div>
+
+<main id="main">
+
+<!-- ============ DOMOV ============ -->
+<div class="view" data-view="domov">
+  <section class="wrap hero" data-wp="Columns · 2 stolpca (besedilo + slika)">
+    <div class="hero-text">
+      <h1 class="brand-name"><span>Iluminus<span class="glow" aria-hidden="true"></span></span><span class="bn-sub">Photography</span></h1>
+      <p class="role">Svetloba, ljudje in <mark>spomini</mark>.</p>
+      <p class="blurb">Portreti, poroke, dogodki in pokrajine po vsej Sloveniji. Fotografiramo takrat, ko je svetloba najlepša: ob zori, v modri uri in pod zvezdami.</p>
+      <div class="hero-ctas">
+        <a class="btn" href="#kontakt" data-go="kontakt">Rezervirajte termin</a>
+        <a class="text-link" href="#projekti" data-go="projekti">Oglejte si projekte</a>
+      </div>
+    </div>
+    <figure class="portrait">
+      <span class="ph" data-scene="hribi" data-seed="22" aria-hidden="true"><canvas></canvas></span>
+    </figure>
+  </section>
+
+  <section class="panel-outer" data-wp="Group (modro ozadje, zaobljeni robovi) + drsnik fotografij">
+    <div class="panel p-cobalt">
+      <div class="wrap">
+        <h2 class="band-title">Ujeti <em>trenutki</em></h2>
+        <p class="band-sub">Izbor fotografij iz zadnjih dveh let. Povlecite ali uporabite puščici.</p>
+      </div>
+      <div class="carousel">
+        <button class="arrow prev" type="button" data-dir="-1" aria-label="Prejšnja fotografija"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+        <div class="track" id="track" aria-label="Fotografije"></div>
+        <button class="arrow next" type="button" data-dir="1" aria-label="Naslednja fotografija"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+      </div>
+      <div class="band-actions">
+        <button class="auto-btn" id="autoBtn" type="button"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14"/><rect x="14" y="5" width="4" height="14"/></svg><span>Ustavi drsenje</span></button>
+        <a class="btn btn-white" href="#projekti" data-go="projekti">Vsi projekti</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap statement" data-wp="Pullquote (izjava znamke)">
+    <blockquote class="pull">
+      <span class="qmark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="#1A1A2E"><path d="M6.8 6C4.6 6 3 7.8 3 10.2c0 2.3 1.6 4 3.6 4 .3 0 .5 0 .7-.1-.4 1.5-1.6 2.7-3.2 3.2l.5 1.4c3.4-.9 5.6-3.7 5.6-7.6C10.2 8 8.8 6 6.8 6zm10.5 0c-2.2 0-3.8 1.8-3.8 4.2 0 2.3 1.6 4 3.6 4 .3 0 .5 0 .7-.1-.4 1.5-1.6 2.7-3.2 3.2l.5 1.4c3.4-.9 5.6-3.7 5.6-7.6C20.7 8 19.3 6 17.3 6z"/></svg></span>
+      <p>Iluminus izhaja iz latinske besede <em>lumen</em>, ki pomeni svetlobo. Iz nje nastane vsaka naša fotografija.</p>
+      <cite>Iluminus Photography</cite>
+    </blockquote>
+    <div class="more"><a class="text-link" href="#storitve" data-go="storitve">Poglejte naše storitve</a><a class="text-link" href="#o-meni" data-go="o-meni">Kdo stoji za Iluminus</a></div>
+  </section>
+
+  <section class="panel-outer" data-wp="Group (rumeno ozadje) + Heading + Buttons">
+    <div class="panel p-sun">
+      <div class="wrap cta">
+        <h2>Imate idejo za <em>fotografiranje?</em></h2>
+        <a class="btn" href="#kontakt" data-go="kontakt">Pišite mi</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ O MENI ============ -->
+<div class="view" data-view="o-meni" hidden>
+  <section class="wrap hero" data-wp="Columns · 2 stolpca (besedilo + slika)">
+    <div class="hero-text">
+      <p class="pill p-mint">O meni</p>
+      <h1 class="title">Vsak svetlobni žarek spremenim v <em>spomin</em><span class="glow" aria-hidden="true"></span></h1>
+      <p class="role">Sem Marko Belsak, fotograf, ki najraje vstane pred soncem in gre spat po zvezdah.</p>
+      <p class="blurb">Fotografirati sem začel na planinskih poteh. Danes z enakim veseljem ujamem nasmeh na družinskem portretu kot Rimsko cesto nad gorami.</p>
+      <a class="mail-row" href="#kontakt" data-go="kontakt">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M3.5 6.5l8.5 6.5 8.5-6.5"/></svg>
+        info@iluminus.example
+      </a>
+    </div>
+    <figure class="portrait sh-coral">
+      <span class="ph" data-scene="portret" data-seed="12" aria-hidden="true"><canvas></canvas></span>
+      <span class="sticker" aria-hidden="true">Serbus!</span>
+    </figure>
+  </section>
+
+  <section class="wrap about-cols" data-wp="Columns · 2 stolpca (besedilo)">
+    <p>Dobra fotografija se začne dolgo pred pritiskom na sprožilec. Začne se s potrpežljivostjo, opazovanjem in čakanjem na pravi trenutek. Zato si vzamem čas za kraj, za svetlobo in predvsem za ljudi pred objektivom.</p>
+    <p>Fotografiram po vsej Sloveniji: družine in pare, poroke in dogodke, pokrajine ob zori in nočno nebo. Če imate idejo, jo skupaj spremenimo v fotografijo, ki jo boste radi pokazali.</p>
+  </section>
+
+  <section class="panel-outer" data-wp="Group (lila ozadje) + Pullquote + List">
+    <div class="panel p-lilac">
+      <div class="wrap">
+        <blockquote class="pull">
+          <span class="qmark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="#1A1A2E"><path d="M6.8 6C4.6 6 3 7.8 3 10.2c0 2.3 1.6 4 3.6 4 .3 0 .5 0 .7-.1-.4 1.5-1.6 2.7-3.2 3.2l.5 1.4c3.4-.9 5.6-3.7 5.6-7.6C10.2 8 8.8 6 6.8 6zm10.5 0c-2.2 0-3.8 1.8-3.8 4.2 0 2.3 1.6 4 3.6 4 .3 0 .5 0 .7-.1-.4 1.5-1.6 2.7-3.2 3.2l.5 1.4c3.4-.9 5.6-3.7 5.6-7.6C20.7 8 19.3 6 17.3 6z"/></svg></span>
+          <p>Modra ura traja približno dvajset minut. Zato na lokacijo vedno pridem uro prej.</p>
+          <cite>Marko Belsak</cite>
+        </blockquote>
+        <div class="facts">
+          <div>
+            <p class="pill">V fotografski torbi</p>
+            <ul>
+              <li>Fotoaparat polnega formata</li>
+              <li>Teleobjektiv 70–200 mm f/2.8</li>
+              <li>Širokokotni objektiv za nočno nebo</li>
+              <li>Veliko kreativnih idej</li>
+            </ul>
+          </div>
+          <div>
+            <p class="pill">Na hitro</p>
+            <ul>
+              <li><span>Najljubša svetloba:</span> modra ura</li>
+              <li><span>Najljubši motiv:</span> vaš nasmeh</li>
+              <li><span>Fotografiram od:</span> leta 2021</li>
+              <li><span>Območje:</span> vsa Slovenija</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel-outer" data-wp="Group (koralno ozadje) + Heading + Buttons">
+    <div class="panel p-coral">
+      <div class="wrap cta">
+        <h2>Fotografirajva <em>skupaj!</em></h2>
+        <a class="btn" href="#kontakt" data-go="kontakt">Pišite mi</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ STORITVE ============ -->
+<div class="view" data-view="storitve" hidden>
+  <section class="wrap page-head" data-wp="Heading + Paragraph">
+    <p class="pill p-mint">Storitve</p>
+    <h1 class="big long">Kaj <em>fotografiramo</em><span class="glow" aria-hidden="true"></span></h1>
+    <p class="lede">Tri vrste fotografiranja, vsaka s svojim pristopom. Cene so začetne, natančno ponudbo pošljemo po kratkem pogovoru.</p>
+  </section>
+
+  <section class="wrap svc-list" data-wp="Query Loop (tip vsebine Storitve) · Media &amp; Text">
+    <article class="svc-row">
+      <figure class="svc-media"><span class="ph" data-scene="portret" data-seed="4" aria-hidden="true"><canvas></canvas></span></figure>
+      <div class="svc-body">
+        <p class="pill p-orange">Za družine, pare in posameznike</p>
+        <h2>Portreti in družine</h2>
+        <p>Sproščeno fotografiranje na prostem ali doma, brez togih poz. Izberemo lokacijo in uro z najlepšo svetlobo, med fotografiranjem pa pustimo prostor za spontane trenutke.</p>
+        <ul class="incl">
+          <li>1 ura fotografiranja</li>
+          <li>25 obdelanih fotografij</li>
+          <li>Lokacija po vaši izbiri</li>
+          <li>Zasebna spletna galerija v 10 dneh</li>
+        </ul>
+        <div class="svc-foot">
+          <p class="price lg">od 89 €</p>
+          <a class="btn" href="#kontakt" data-go="kontakt" data-service="portret">Povprašajte</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="svc-row">
+      <figure class="svc-media"><span class="ph" data-scene="portret" data-seed="30" data-plain="1" aria-hidden="true"><canvas></canvas></span></figure>
+      <div class="svc-body">
+        <p class="pill p-sun">Za poroke, rojstne dneve in praznovanja</p>
+        <h2>Poroke in dogodki</h2>
+        <p>Diskretno spremljamo dogajanje in ujamemo trenutke, ki jih gostje zamudijo. Pred dogodkom se dogovorimo, kateri trenutki so za vas najpomembnejši.</p>
+        <ul class="incl">
+          <li>Do 4 ure fotografiranja</li>
+          <li>Več kot 150 obdelanih fotografij</li>
+          <li>Predogled najlepših fotografij v 3 dneh</li>
+          <li>Spletna galerija, ki jo lahko delite z gosti</li>
+        </ul>
+        <div class="svc-foot">
+          <p class="price lg">od 290 €</p>
+          <a class="btn" href="#kontakt" data-go="kontakt" data-service="dogodek">Povprašajte</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="svc-row">
+      <figure class="svc-media"><span class="ph" data-scene="produkt" data-seed="15" aria-hidden="true"><canvas></canvas></span></figure>
+      <div class="svc-body">
+        <p class="pill p-lilac">Za spletne trgovine in podjetja</p>
+        <h2>Produktna fotografija izdelkov</h2>
+        <p>Čiste, svetle fotografije izdelkov za spletno trgovino, kataloge in družbena omrežja. Izdelke fotografiramo na enotni podlagi, da je vaša ponudba videti urejeno.</p>
+        <ul class="incl">
+          <li>Bela ali barvna podlaga</li>
+          <li>Do 5 fotografij na izdelek</li>
+          <li>Obdelava in priprava za splet</li>
+          <li>Velikosti za spletno trgovino in družbena omrežja</li>
+        </ul>
+        <div class="svc-foot">
+          <p class="price lg">od 49 €</p>
+          <a class="btn" href="#kontakt" data-go="kontakt" data-service="produkt">Povprašajte</a>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <section class="panel-outer" data-wp="Group (lila ozadje) + Columns · 4 stolpci (potek)">
+    <div class="panel p-lilac">
+      <div class="wrap">
+        <h2 class="band-title">Kako <em>poteka</em></h2>
+        <ol class="steps">
+          <li class="step"><span class="step-n">1</span><h3>Pogovor</h3><p>Pišete nam ali pokličete. Skupaj izberemo termin, lokacijo in slog fotografij.</p></li>
+          <li class="step"><span class="step-n">2</span><h3>Fotografiranje</h3><p>Sproščeno in brez naglice. Usmerjamo vas, a pustimo prostor za spontane trenutke.</p></li>
+          <li class="step"><span class="step-n">3</span><h3>Izbor in obdelava</h3><p>Izberemo najboljše posnetke in vsakega ročno obdelamo.</p></li>
+          <li class="step"><span class="step-n">4</span><h3>Spletna galerija</h3><p>Fotografije v visoki ločljivosti prejmete v zasebni spletni galeriji.</p></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel-outer" data-wp="Group (rumeno ozadje) + Heading + Buttons">
+    <div class="panel p-sun">
+      <div class="wrap cta">
+        <h2>Niste prepričani, kaj <em>potrebujete?</em></h2>
+        <a class="btn" href="#kontakt" data-go="kontakt">Pišite nam</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ PROJEKTI ============ -->
+<div class="view" data-view="projekti" hidden>
+  <section class="wrap page-head" data-wp="Heading + Paragraph">
+    <p class="pill p-sun">Portfelj</p>
+    <div class="head-line">
+      <h1 class="big">Projekti<span class="glow" aria-hidden="true"></span></h1>
+      <span class="pill p-coral tilt">9 fotografij</span>
+    </div>
+    <p class="lede">Izbor fotografij iz zadnjih dveh let. Kliknite fotografijo za večji prikaz.</p>
+  </section>
+  <section class="panel-outer" data-wp="Group (pikčasto ozadje) + Gallery (3 stolpci, dodaten CSS razred)">
+    <div class="panel p-board">
+      <div class="wrap">
+        <div class="pgrid" id="pgrid"></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ KONTAKT ============ -->
+<div class="view" data-view="kontakt" hidden>
+  <section class="wrap hero top" data-wp="Columns · 2 stolpca (podatki + obrazec)">
+    <div class="hero-text">
+      <p class="pill p-coral">Kontakt</p>
+      <h1 class="title">Pišite <em>mi</em><span class="glow" aria-hidden="true"></span></h1>
+      <p class="role">Vprašanje, termin ali ideja za fotografiranje?</p>
+      <p class="blurb">Izpolnite obrazec ali mi pišite na e-pošto. Odgovorim v enem delovnem dnevu.</p>
+      <div class="info-list">
+        <div class="info-row">
+          <span class="ico-bub p-sun"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M3.5 6.5l8.5 6.5 8.5-6.5"/></svg></span>
+          <span id="mail">info@iluminus.example</span>
+          <button class="copy" id="copyMail" type="button">Kopiraj</button>
+        </div>
+        <div class="info-row">
+          <span class="ico-bub p-mint"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M6.5 3.5h3l1.5 4-2 1.3a11 11 0 0 0 6.2 6.2l1.3-2 4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.5 5.7a2 2 0 0 1 2-2.2z"/></svg></span>
+          <span>040 000 000</span>
+        </div>
+        <div class="info-row">
+          <span class="ico-bub p-lilac"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/></svg></span>
+          <span>Vsa Slovenija</span>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="form-card" id="formWrap">
+        <form class="form" id="form" novalidate data-wp="Obrazec · Contact Form 7 / WPForms">
+          <div class="field">
+            <label for="f-ime">Ime in priimek *</label>
+            <input id="f-ime" name="ime" type="text" autocomplete="name" placeholder="npr. Ana Novak" aria-describedby="f-ime-err">
+            <p class="err" id="f-ime-err" aria-live="polite"></p>
+          </div>
+          <div class="row2">
+            <div class="field">
+              <label for="f-email">E-pošta *</label>
+              <input id="f-email" name="email" type="email" autocomplete="email" inputmode="email" placeholder="ime@domena.si" aria-describedby="f-email-err">
+              <p class="err" id="f-email-err" aria-live="polite"></p>
+            </div>
+            <div class="field">
+              <label for="f-tel">Telefon (neobvezno)</label>
+              <input id="f-tel" name="telefon" type="tel" autocomplete="tel" inputmode="tel" placeholder="040 000 000">
+            </div>
+          </div>
+          <div class="row2">
+            <div class="field">
+              <label for="f-vrsta">Vrsta fotografiranja</label>
+              <select id="f-vrsta" name="vrsta">
+                <option value="">Izberite …</option>
+                <option value="portret">Portret ali družina</option>
+                <option value="dogodek">Poroka ali dogodek</option>
+                <option value="produkt">Produktna fotografija</option>
+                <option value="pokrajina">Pokrajina ali nočno nebo</option>
+                <option value="drugo">Drugo ali samo vprašanje</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="f-datum">Želeni datum (neobvezno)</label>
+              <input id="f-datum" name="datum" type="date">
+            </div>
+          </div>
+          <div class="field">
+            <label for="f-sporocilo">Vaše vprašanje ali sporočilo *</label>
+            <textarea id="f-sporocilo" name="sporocilo" placeholder="Na kratko opišite, kaj bi radi fotografirali." aria-describedby="f-sporocilo-err"></textarea>
+            <p class="err" id="f-sporocilo-err" aria-live="polite"></p>
+          </div>
+          <div class="field">
+            <label class="check" for="f-soglasje">
+              <input id="f-soglasje" name="soglasje" type="checkbox" aria-describedby="f-soglasje-err">
+              <span>Strinjam se, da se moji podatki uporabijo samo za odgovor na to povpraševanje. *</span>
+            </label>
+            <p class="err" id="f-soglasje-err" aria-live="polite"></p>
+          </div>
+          <div class="form-foot">
+            <p class="small">Polja z * so obvezna.</p>
+            <button class="btn" type="submit">Pošlji povpraševanje</button>
+          </div>
+        </form>
+      </div>
+      <div class="done" id="formDone" hidden tabindex="-1">
+        <span class="logo">iluminus<span class="glow" aria-hidden="true"></span></span>
+        <h2>Hvala, <span id="doneName"></span>!</h2>
+        <p>Obrazec je izpolnjen pravilno. Ker je to prototip, se sporočilo ne pošlje nikamor.</p>
+        <p class="small">Na objavljeni WordPress strani bo vtičnik za obrazce sporočilo poslal na e-pošto fotografa, obiskovalec pa bo videl to potrditev.</p>
+        <button class="btn" id="newMsg" type="button">Novo povpraševanje</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel-outer" data-wp="Group (mint ozadje) + Details">
+    <div class="panel p-mint">
+      <div class="wrap">
+        <h2 class="band-title">Pogosta <em>vprašanja</em></h2>
+        <div class="faq">
+          <details>
+            <summary>Koliko stane fotografiranje?</summary>
+            <p>Portretno fotografiranje stane od 89 €. Natančno ponudbo pošljem po kratkem pogovoru.</p>
+          </details>
+          <details>
+            <summary>Kdaj dobim fotografije?</summary>
+            <p>Obdelane fotografije prejmete v zasebni spletni galeriji v 10 dneh.</p>
+          </details>
+          <details>
+            <summary>Kaj, če na dan fotografiranja dežuje?</summary>
+            <p>Termin brezplačno prestavimo na prvi naslednji prost dan.</p>
+          </details>
+          <details>
+            <summary>Ali fotografirate tudi zunaj Slovenije?</summary>
+            <p>Da, po dogovoru. Potne stroške dodam k ponudbi.</p>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+</main>
+
+<footer class="site-foot" data-wp="Noga · Template Part">
+  <div class="wrap">
+    <div class="foot-inner">
+      <a class="logo-lock" href="#domov" data-go="domov" aria-label="Iluminus Photography – domov"><span class="logo">iluminus<span class="glow" aria-hidden="true"></span></span><span class="logo-sub" aria-hidden="true">Photography</span></a>
+      <nav class="foot-links" aria-label="Noga">
+        <a href="#domov" data-go="domov">Domov</a>
+        <a href="#o-meni" data-go="o-meni">O meni</a>
+        <a href="#storitve" data-go="storitve">Storitve</a>
+        <a href="#projekti" data-go="projekti">Projekti</a>
+        <a href="#kontakt" data-go="kontakt">Kontakt</a>
+        <a href="#" data-noop>Instagram</a>
+      </nav>
+    </div>
+    <div class="foot-bottom">
+      <p>© 2026 Iluminus Photography. Prototip: vsi podatki so izmišljeni, fotografije so nadomestki, narisani s kodo.</p>
+      <button class="wp-toggle" id="wpToggle" type="button" aria-pressed="false">Pokaži WordPress bloke</button>
+    </div>
+  </div>
+</footer>
+
+<dialog class="lb" id="lb" aria-labelledby="lbTitle">
+  <span class="ph" id="lbPh" aria-hidden="true"><canvas></canvas></span>
+  <div class="lb-cap">
+    <div>
+      <h2 id="lbTitle"></h2>
+      <p id="lbDesc"></p>
+      <p class="lb-meta" id="lbMeta"></p>
+    </div>
+    <button class="btn btn-white lb-close" id="lbClose" type="button">Zapri</button>
+  </div>
+</dialog>
+<script>
+(function(){
+const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>Array.from(r.querySelectorAll(s));
+
+/* ---------- Photos ---------- */
+const PHOTOS=[
+ {id:'rimska',scene:'nebo',seed:7,year:2026,title:'Rimska cesta nad Julijci',desc:'Tri noči čakanja na jasno nebo brez lune.',exif:'f/2.8 · 20 s · ISO 3200'},
+ {id:'megla',scene:'hribi',seed:3,year:2025,title:'Jutro nad meglo',desc:'Sončni vzhod, ko je megla še ležala v dolinah.',exif:'f/8 · 1/125 s · ISO 100'},
+ {id:'jezero',scene:'jezero',seed:9,year:2026,title:'Modra ura ob jezeru',desc:'Dolga osvetlitev je gladino zgladila v ogledalo.',exif:'f/11 · 30 s · ISO 100'},
+ {id:'druzina',scene:'portret',seed:11,year:2025,title:'Jesenski portret',desc:'Sproščeno popoldne v parku, v mehki svetlobi pred sončnim zahodom.',exif:'f/2.8 · 1/500 s · ISO 400'},
+ {id:'sledi',scene:'sledi',seed:8,year:2026,title:'Zvezdne sledi',desc:'Dve uri vrtenja neba, zloženi v eno fotografijo.',exif:'f/4 · 240 × 30 s · ISO 800'},
+ {id:'gore',scene:'gore',seed:17,year:2025,title:'Gorska tišina',desc:'Meglen dan na grebenu, ko so se oblaki dvigovali iz doline.',exif:'f/5.6 · 1/320 s · ISO 200'},
+ {id:'ples',scene:'portret',seed:30,plain:1,year:2025,title:'Prvi ples',desc:'Lučke na poročnem slavju, ujete z odprto zaslonko.',exif:'f/2 · 1/160 s · ISO 1600'},
+ {id:'perzeidi',scene:'nebo',seed:21,meteors:14,year:2026,title:'Perzeidi',desc:'Utrinki avgustovskega meteorskega roja.',exif:'f/2.8 · 15 s · ISO 6400'},
+ {id:'vecer',scene:'hribi',seed:14,year:2026,title:'Zadnja svetloba',desc:'Plasti hribov ob sončnem zahodu, posnete s teleobjektivom.',exif:'f/8 · 1/250 s · ISO 100'}
+];
+const byId=Object.fromEntries(PHOTOS.map(p=>[p.id,p]));
+const phTag=p=>`<span class="ph" data-scene="${p.scene}" data-seed="${p.seed}"${p.meteors?` data-meteors="${p.meteors}"`:''}${p.plain?' data-plain="1"':''} aria-hidden="true"><canvas></canvas></span>`;
+/* The carousel set is rendered three times (copy, original, copy) so it can loop endlessly */
+const CAROUSEL=['megla','jezero','rimska','druzina','sledi','gore','vecer','perzeidi'];
+const capItem=(p,clone)=>`<button class="cap-item" type="button" data-open="${p.id}"${clone?' aria-hidden="true" tabindex="-1"':` aria-label="Povečaj fotografijo: ${p.title}"`}>${phTag(p)}<span class="cap-label">${p.title}</span></button>`;
+$('#track').innerHTML=[true,false,true].map(clone=>CAROUSEL.map(id=>capItem(byId[id],clone)).join('')).join('');
+$('#pgrid').innerHTML=PHOTOS.map(p=>`<button class="pitem" type="button" data-open="${p.id}" aria-label="Povečaj fotografijo: ${p.title}">${phTag(p)}<span class="cap-label">${p.title} · ${p.year}</span></button>`).join('');
+
+/* ---------- Placeholder photo generator (canvas) ---------- */
+function rng(seed){let a=(seed*2654435761)>>>0||1;return()=>{a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+const hx=h=>[1,3,5].map(i=>parseInt(h.slice(i,i+2),16));
+const mix=(a,b,t)=>{const A=hx(a),B=hx(b);return'rgb('+A.map((v,i)=>Math.round(v+(B[i]-v)*t)).join(',')+')'};
+function ridge(r,w,base,amp,sharp){
+ const n=Math.max(40,Math.ceil(w/5)),oc=[];
+ for(let k=0;k<4;k++)oc.push({f:(1.1+r()*1.5)*Math.pow(2.1,k),p:r()*6.283,a:amp/Math.pow(2.2,k)});
+ const pts=[];
+ for(let i=0;i<=n;i++){const x=i/n;let y=0;for(const o of oc){const s=Math.sin(x*6.283*o.f+o.p);y+=(sharp?(1-Math.abs(s))*2-1:s)*o.a}pts.push([x*w,base-y])}
+ return pts;
+}
+function fillRidge(c,pts,w,h,fill){c.beginPath();c.moveTo(0,h);pts.forEach(p=>c.lineTo(p[0],p[1]));c.lineTo(w,h);c.closePath();c.fillStyle=fill;c.fill()}
+function glow(c,x,y,rad,stops){const g=c.createRadialGradient(x,y,0,x,y,rad);stops.forEach(s=>g.addColorStop(s[0],s[1]));c.fillStyle=g;c.fillRect(x-rad,y-rad,rad*2,rad*2)}
+function fog(c,w,h,y,span,a){const g=c.createLinearGradient(0,y-span*.4,0,y+span*.6);g.addColorStop(0,'rgba(232,230,224,0)');g.addColorStop(.55,`rgba(232,230,224,${a})`);g.addColorStop(1,'rgba(232,230,224,0)');c.fillStyle=g;c.fillRect(0,y-span*.4,w,span)}
+
+function rrect(c,x,y,w,h,rad){c.beginPath();if(c.roundRect)c.roundRect(x,y,w,h,rad);else c.rect(x,y,w,h)}
+function floorShadow(c,x,y,rx,a){c.save();c.translate(x,y);c.scale(1,.16);glow(c,0,0,rx,[[0,`rgba(70,52,34,${a})`],[1,'rgba(70,52,34,0)']]);c.restore()}
+const SCENES={
+ produkt(c,w,h,r,o){
+  const m=Math.min(w,h);
+  let g=c.createLinearGradient(0,0,0,h);g.addColorStop(0,'#f3f0eb');g.addColorStop(.62,'#e6e1d9');g.addColorStop(1,'#d7d0c5');c.fillStyle=g;c.fillRect(0,0,w,h);
+  glow(c,w*.22,h*.18,Math.max(w,h)*.7,[[0,'rgba(255,255,255,.75)'],[1,'rgba(255,255,255,0)']]);
+  const floor=h*.8;
+  /* white jar */
+  const jx=w*.42,jw=m*.32,jh=m*.2,jl=jh*.36;
+  floorShadow(c,jx+jw*.12,floor,jw*.75,.35);
+  g=c.createLinearGradient(jx-jw/2,0,jx+jw/2,0);g.addColorStop(0,'#c9c2b7');g.addColorStop(.32,'#fbfaf7');g.addColorStop(.7,'#e4dfd7');g.addColorStop(1,'#b7afa3');
+  rrect(c,jx-jw/2,floor-jh,jw,jh,[2,2,m*.02,m*.02]);c.fillStyle=g;c.fill();
+  g=c.createLinearGradient(jx-jw/2,0,jx+jw/2,0);g.addColorStop(0,'#1f1c1a');g.addColorStop(.35,'#4a4541');g.addColorStop(1,'#141211');
+  rrect(c,jx-jw*.52,floor-jh-jl,jw*1.04,jl+2,m*.012);c.fillStyle=g;c.fill();
+  /* amber dropper bottle, slightly in front */
+  const bx=w*.6,bf=floor+h*.03,bw=m*.2,bh=m*.36,top=bf-bh;
+  floorShadow(c,bx+bw*.15,bf,bw*.85,.45);
+  g=c.createLinearGradient(bx-bw/2,0,bx+bw/2,0);g.addColorStop(0,'#4a2205');g.addColorStop(.28,'#a3531a');g.addColorStop(.4,'#e09445');g.addColorStop(.62,'#8e4510');g.addColorStop(1,'#331703');
+  rrect(c,bx-bw/2,top,bw,bh,[bw*.3,bw*.3,bw*.07,bw*.07]);c.fillStyle=g;c.fill();
+  c.fillStyle='rgba(255,255,255,.28)';rrect(c,bx-bw*.3,top+bh*.12,bw*.06,bh*.78,bw*.03);c.fill();
+  c.fillStyle='#f0ebe2';c.fillRect(bx-bw*.42,top+bh*.4,bw*.84,bh*.32);
+  c.fillStyle='#3a332c';c.fillRect(bx-bw*.26,top+bh*.48,bw*.52,bh*.035);c.fillRect(bx-bw*.18,top+bh*.56,bw*.36,bh*.02);c.fillRect(bx-bw*.18,top+bh*.61,bw*.36,bh*.02);
+  c.fillStyle='#3e1c05';c.fillRect(bx-bw*.17,top-m*.035,bw*.34,m*.04);
+  g=c.createLinearGradient(bx-bw*.22,0,bx+bw*.22,0);g.addColorStop(0,'#141211');g.addColorStop(.4,'#3b3734');g.addColorStop(1,'#0e0d0c');
+  c.fillStyle=g;rrect(c,bx-bw*.22,top-m*.1,bw*.44,m*.07,m*.006);c.fill();
+  rrect(c,bx-bw*.13,top-m*.19,bw*.26,m*.1,[bw*.13,bw*.13,2,2]);c.fill();
+ },
+ gore(c,w,h,r,o){
+  let g=c.createLinearGradient(0,0,0,h);g.addColorStop(0,'#b4b8b2');g.addColorStop(.45,'#d2d1c9');g.addColorStop(1,'#e2ded3');c.fillStyle=g;c.fillRect(0,0,w,h);
+  const far='#a3a69e',near='#4a3f2e';let last=null;
+  for(let k=0;k<5;k++){
+   const t=k/4,base=h*(.4+k*.115),pts=ridge(r,w,base,h*(.075-k*.008),k<2);
+   fillRidge(c,pts,w,h,mix(far,near,Math.pow(t,.9)));
+   if(k<4)fog(c,w,h,base+h*.03,h*.16,(.5-k*.08).toFixed(2));
+   last=pts;
+  }
+  if(o.seed!==17){
+   const i=Math.round(last.length*.62),fx=last[i][0],fy=Math.min(h*1.02,last[i][1]+h*.02),fh=h*.5,s=fh;
+   c.fillStyle='#1d1b18';c.strokeStyle='#1d1b18';c.lineCap='round';
+   c.beginPath();c.ellipse(fx,fy-s*.925,s*.05,s*.064,0,0,6.283);c.fill();
+   c.fillStyle='#2a2620';c.beginPath();c.ellipse(fx,fy-s*.955,s*.055,s*.04,0,3.3,6.1);c.fill();c.fillStyle='#1d1b18';
+   c.beginPath();c.moveTo(fx-s*.035,fy-s*.865);c.lineTo(fx+s*.035,fy-s*.865);
+   c.quadraticCurveTo(fx+s*.11,fy-s*.855,fx+s*.11,fy-s*.79);c.lineTo(fx+s*.085,fy-s*.5);c.lineTo(fx-s*.085,fy-s*.5);c.lineTo(fx-s*.11,fy-s*.79);
+   c.quadraticCurveTo(fx-s*.11,fy-s*.855,fx-s*.035,fy-s*.865);c.closePath();c.fill();
+   c.lineWidth=s*.042;
+   c.beginPath();c.moveTo(fx-s*.1,fy-s*.8);c.lineTo(fx-s*.12,fy-s*.55);c.stroke();
+   c.beginPath();c.moveTo(fx+s*.1,fy-s*.8);c.lineTo(fx+s*.13,fy-s*.56);c.stroke();
+   c.fillRect(fx+s*.1,fy-s*.57,s*.075,s*.05);
+   c.lineWidth=s*.058;
+   c.beginPath();c.moveTo(fx-s*.042,fy-s*.52);c.lineTo(fx-s*.05,fy-s*.02);c.stroke();
+   c.beginPath();c.moveTo(fx+s*.042,fy-s*.52);c.lineTo(fx+s*.06,fy-s*.02);c.stroke();
+  }
+ },
+ nebo(c,w,h,r,o){
+  const u=o.u;
+  let g=c.createLinearGradient(0,0,0,h);
+  g.addColorStop(0,'#03050d');g.addColorStop(.5,'#0a1330');g.addColorStop(.82,'#1c2348');g.addColorStop(1,'#3a2e4a');
+  c.fillStyle=g;c.fillRect(0,0,w,h);
+  const ax=w*(.05+r()*.25),ay=h*1.05,bx=w*(.7+r()*.3),by=-h*.15,dx=bx-ax,dy=by-ay,L=Math.hypot(dx,dy),nx=-dy/L,ny=dx/L;
+  const along=(t,s)=>[ax+dx*t+nx*s,ay+dy*t+ny*s];
+  const gs=()=>(r()+r()+r()+r()-2)/2;
+  c.globalCompositeOperation='lighter';
+  for(let i=0;i<110;i++){
+   const t=r(),[x,y]=along(t,gs()*L*.07),rad=L*(.025+r()*.06),a=((.05+r()*.05)*(1-Math.abs(t-.45))).toFixed(3);
+   glow(c,x,y,rad,[[0,t<.45?`rgba(240,205,175,${a})`:`rgba(190,200,240,${a})`],[1,'rgba(0,0,0,0)']]);
+  }
+  c.globalCompositeOperation='source-over';
+  for(let i=0;i<45;i++){const t=.15+r()*.7,[x,y]=along(t,gs()*L*.02),rad=L*(.008+r()*.025);glow(c,x,y,rad,[[0,'rgba(3,5,14,.35)'],[1,'rgba(3,5,14,0)']])}
+  const n=Math.round(w*h/(650*u*u));
+  for(let i=0;i<n;i++){
+   let x,y;if(i<n*.45){[x,y]=along(r(),gs()*L*.08)}else{x=r()*w;y=r()*h}
+   const m=r(),s=(.3+m*m*m*1.4)*u,q=r();
+   c.fillStyle=q<.12?'#ffd8ae':q<.3?'#d5e2ff':'#ffffff';c.globalAlpha=.3+r()*.7;
+   c.beginPath();c.arc(x,y,s,0,6.283);c.fill();
+  }
+  c.globalAlpha=1;
+  const nb=4+Math.round(w*h/(90000*u*u));
+  for(let i=0;i<nb;i++){const x=r()*w,y=r()*h*.7,rad=(4+r()*6)*u;glow(c,x,y,rad,[[0,'rgba(255,255,255,.95)'],[.25,'rgba(220,230,255,.35)'],[1,'rgba(220,230,255,0)']])}
+  if(o.meteors){
+   const rx=w*.12,ry=h*.04;c.lineCap='round';
+   for(let i=0;i<o.meteors;i++){
+    const x=w*(.2+r()*.75),y=h*(.08+r()*.5),ang=Math.atan2(y-ry,x-rx),len=(30+r()*90)*u,x2=x+Math.cos(ang)*len,y2=y+Math.sin(ang)*len,lg=c.createLinearGradient(x,y,x2,y2);
+    lg.addColorStop(0,'rgba(255,255,255,0)');lg.addColorStop(1,r()<.3?'rgba(200,255,220,.9)':'rgba(240,246,255,.95)');
+    c.strokeStyle=lg;c.lineWidth=(.8+r()*1.2)*u;c.beginPath();c.moveTo(x,y);c.lineTo(x2,y2);c.stroke();
+   }
+  }
+  g=c.createLinearGradient(0,h*.55,0,h);g.addColorStop(0,'rgba(240,150,80,0)');g.addColorStop(1,'rgba(240,150,80,.22)');c.fillStyle=g;c.fillRect(0,h*.55,w,h*.45);
+  fillRidge(c,ridge(r,w,h*.8,h*.07,true),w,h,'#0b1022');
+  fillRidge(c,ridge(r,w,h*.9,h*.035,false),w,h,'#020309');
+ },
+ sledi(c,w,h,r,o){
+  const u=o.u;
+  let g=c.createLinearGradient(0,0,0,h);g.addColorStop(0,'#04060e');g.addColorStop(.7,'#111936');g.addColorStop(1,'#33294a');c.fillStyle=g;c.fillRect(0,0,w,h);
+  const px=w*(.42+r()*.16),py=h*(.18+r()*.08),maxR=Math.hypot(w,h)*.95,n=Math.round(420*Math.sqrt(w*h)/(900*u));
+  c.lineCap='round';
+  for(let i=0;i<n;i++){
+   const rad=Math.pow(r(),.75)*maxR,start=r()*6.283,len=.45+r()*.2,q=r();
+   const col=q<.15?'255,206,160':q<.35?'190,210,255':'255,255,255';
+   c.strokeStyle=`rgba(${col},${(.2+r()*.6).toFixed(2)})`;c.lineWidth=(.5+r()*r()*1.7)*u;
+   c.beginPath();c.arc(px,py,rad,start,start+len);c.stroke();
+  }
+  g=c.createLinearGradient(0,h*.6,0,h);g.addColorStop(0,'rgba(240,150,80,0)');g.addColorStop(1,'rgba(240,150,80,.2)');c.fillStyle=g;c.fillRect(0,h*.6,w,h*.4);
+  fillRidge(c,ridge(r,w,h*.84,h*.05,true),w,h,'#05060c');
+ },
+ hribi(c,w,h,r){
+  let g=c.createLinearGradient(0,0,0,h);
+  g.addColorStop(0,'#2d3a6b');g.addColorStop(.38,'#9a6478');g.addColorStop(.6,'#ec9a5e');g.addColorStop(.78,'#f7c98c');g.addColorStop(1,'#f7d9a8');
+  c.fillStyle=g;c.fillRect(0,0,w,h);
+  const m=Math.min(w,h),sx=w*(.3+r()*.45),sy=h*.55;
+  glow(c,sx,sy,m*.55,[[0,'rgba(255,246,220,1)'],[.11,'rgba(255,232,180,.95)'],[.125,'rgba(255,214,150,.55)'],[1,'rgba(255,190,120,0)']]);
+  const far='#c08a95',near='#231c31';
+  for(let k=0;k<5;k++){
+   const t=k/4,base=h*(.52+k*.1);
+   fillRidge(c,ridge(r,w,base,h*(.05-k*.004),false),w,h,mix(far,near,Math.pow(t,.75)));
+   if(k<4){const fg=c.createLinearGradient(0,base-h*.04,0,base+h*.09);fg.addColorStop(0,'rgba(255,226,205,0)');fg.addColorStop(.6,`rgba(255,226,205,${(.38-k*.06).toFixed(2)})`);fg.addColorStop(1,'rgba(255,226,205,0)');c.fillStyle=fg;c.fillRect(0,base-h*.04,w,h*.13)}
+  }
+ },
+ jezero(c,w,h,r,o){
+  const u=o.u,y0=h*.56;
+  let g=c.createLinearGradient(0,0,0,y0);
+  g.addColorStop(0,'#111a40');g.addColorStop(.55,'#3f5190');g.addColorStop(.86,'#b98a8f');g.addColorStop(1,'#eaa877');
+  c.fillStyle=g;c.fillRect(0,0,w,y0+1);
+  for(let i=0;i<w*h/(9000*u*u);i++){c.globalAlpha=.2+r()*.5;c.fillStyle='#fff';c.beginPath();c.arc(r()*w,r()*h*.28,(.3+r()*.8)*u,0,6.283);c.fill()}
+  c.globalAlpha=1;
+  const pts=ridge(r,w,y0-h*.08,h*.055,true).map(p=>[p[0],Math.min(p[1],y0-1)]);
+  c.beginPath();c.moveTo(0,y0);pts.forEach(p=>c.lineTo(p[0],p[1]));c.lineTo(w,y0);c.closePath();c.fillStyle='#262e58';c.fill();
+  g=c.createLinearGradient(0,y0,0,h);g.addColorStop(0,'#c9917f');g.addColorStop(.25,'#4a5a92');g.addColorStop(1,'#0f1533');c.fillStyle=g;c.fillRect(0,y0,w,h-y0);
+  c.beginPath();c.moveTo(0,y0);pts.forEach(p=>c.lineTo(p[0],2*y0-p[1]));c.lineTo(w,y0);c.closePath();c.fillStyle='rgba(30,38,78,.85)';c.fill();
+  for(let i=0;i<140;i++){const y=y0+Math.pow(r(),1.6)*(h-y0),x=r()*w,len=(20+r()*130)*u;c.fillStyle=`rgba(255,220,195,${(.04+r()*.08).toFixed(3)})`;c.fillRect(x,y,len,Math.max(1,u*.8))}
+  fillRidge(c,ridge(r,w,h*.95,h*.025,false),w,h,'#060816');
+ },
+ portret(c,w,h,r,o){
+  const m=Math.min(w,h);
+  const g=c.createRadialGradient(w*.3,h*.35,0,w*.3,h*.35,Math.max(w,h)*.9);
+  g.addColorStop(0,o.plain?'#7a4a2c':'#6b4330');g.addColorStop(.5,'#2e1d1c');g.addColorStop(1,'#140d10');
+  c.fillStyle=g;c.fillRect(0,0,w,h);
+  c.globalCompositeOperation='lighter';
+  const N=o.plain?46:30;
+  for(let i=0;i<N;i++){
+   const x=r()*w,y=r()*h*(o.plain?1:.8),rad=m*(.035+r()*.1),hue=(18+r()*26).toFixed(0),a=+(.06+r()*.16).toFixed(3);
+   const bg=c.createRadialGradient(x,y,rad*.5,x,y,rad);
+   bg.addColorStop(0,`hsla(${hue},85%,68%,${a})`);bg.addColorStop(.92,`hsla(${hue},90%,72%,${(a*1.35).toFixed(3)})`);bg.addColorStop(1,`hsla(${hue},90%,72%,0)`);
+   c.fillStyle=bg;c.beginPath();c.arc(x,y,rad,0,6.283);c.fill();
+  }
+  c.globalCompositeOperation='source-over';
+  if(!o.plain){
+   const cx=w*(.56+r()*.08),hr=m*.15,hy=h*.44;
+   c.save();c.shadowColor='rgba(255,170,95,.55)';c.shadowBlur=hr*.6;c.fillStyle='#0c090b';
+   c.beginPath();c.ellipse(cx,hy,hr*.8,hr,0,0,6.283);c.fill();
+   c.beginPath();c.moveTo(cx-hr*3.2,h+2);
+   c.bezierCurveTo(cx-hr*3,hy+hr*2.1,cx-hr*1.3,hy+hr*1.7,cx-hr*.42,hy+hr*.9);
+   c.lineTo(cx+hr*.42,hy+hr*.9);
+   c.bezierCurveTo(cx+hr*1.3,hy+hr*1.7,cx+hr*3,hy+hr*2.1,cx+hr*3.2,h+2);
+   c.closePath();c.fill();c.restore();
+  }
+ }
+};
+
+let grainSrc=null;
+function grain(c,w,h){
+ if(!grainSrc){grainSrc=document.createElement('canvas');grainSrc.width=grainSrc.height=128;const gc=grainSrc.getContext('2d'),id=gc.createImageData(128,128);for(let i=0;i<id.data.length;i+=4){const v=Math.random()*255;id.data[i]=id.data[i+1]=id.data[i+2]=v;id.data[i+3]=255}gc.putImageData(id,0,0)}
+ c.save();c.globalAlpha=.06;c.globalCompositeOperation='overlay';c.fillStyle=c.createPattern(grainSrc,'repeat');c.fillRect(0,0,w,h);c.restore();
+}
+function paint(el,force){
+ const cv=el.querySelector('canvas'),rect=el.getBoundingClientRect();
+ if(rect.width<2||rect.height<2)return;
+ const d=Math.min(window.devicePixelRatio||1,2);
+ const w=Math.round(el.offsetWidth*d),h=Math.round(el.offsetHeight*d);
+ const key=[w,h,el.dataset.scene,el.dataset.seed].join(':');
+ if(!force&&el._k===key)return;
+ el._k=key;cv.width=w;cv.height=h;
+ const c=cv.getContext('2d'),fn=SCENES[el.dataset.scene];if(!fn)return;
+ try{fn(c,w,h,rng(+el.dataset.seed||1),{u:d,seed:+el.dataset.seed,meteors:+el.dataset.meteors||0,plain:!!el.dataset.plain});grain(c,w,h)}catch(e){}
+}
+const ro='ResizeObserver' in window?new ResizeObserver(es=>es.forEach(e=>paint(e.target))):null;
+function paintAll(){$$('.ph').forEach(el=>paint(el))}
+if(ro)$$('.ph').forEach(el=>ro.observe(el));else window.addEventListener('resize',paintAll);
+
+/* ---------- Carousel ---------- */
+const track=$('#track');
+function items(){return $$('.cap-item',track)}
+function setActive(){
+ const tr=track.getBoundingClientRect();if(!tr.width)return;
+ const cx=tr.left+tr.width/2;let best=null,bd=Infinity;
+ items().forEach(it=>{const r=it.getBoundingClientRect(),d=Math.abs(r.left+r.width/2-cx);if(d<bd){bd=d;best=it}});
+ items().forEach(it=>it.classList.toggle('is-active',it===best));
+}
+const N=CAROUSEL.length;
+function centerOn(i,smooth){
+ const it=items()[i];if(!it||!track.clientWidth)return;
+ const left=it.offsetLeft-(track.clientWidth-it.offsetWidth)/2;
+ track.scrollTo({left,behavior:smooth&&!matchMedia('(prefers-reduced-motion: reduce)').matches?'smooth':'auto'});
+}
+/* When scrolling settles in a copy, jump silently to the same photo in the middle set */
+function loop(){
+ const list=items();if(list.length<3*N||!track.clientWidth)return;
+ const cur=list.findIndex(it=>it.classList.contains('is-active'));if(cur<0)return;
+ const setW=list[N].offsetLeft-list[0].offsetLeft;
+ if(cur>=N&&cur<2*N)return;
+ track.classList.add('no-anim');
+ track.scrollLeft+=cur<N?setW:-setW;
+ setActive();
+ requestAnimationFrame(()=>requestAnimationFrame(()=>track.classList.remove('no-anim')));
+}
+let ticking=false,settle;
+const hasScrollEnd='onscrollend' in window;
+track.addEventListener('scroll',()=>{
+ if(!ticking){ticking=true;requestAnimationFrame(()=>{setActive();ticking=false})}
+ if(!hasScrollEnd){clearTimeout(settle);settle=setTimeout(loop,160)}
+},{passive:true});
+if(hasScrollEnd)track.addEventListener('scrollend',loop);
+let placed=false;
+function placeCarousel(){if(placed||!track.clientWidth)return;placed=true;centerOn(N+2,false);setActive()}
+$$('.arrow').forEach(b=>b.addEventListener('click',()=>{
+ const list=items(),cur=list.findIndex(it=>it.classList.contains('is-active'));
+ centerOn(Math.max(0,Math.min(list.length-1,(cur<0?N:cur)+(+b.dataset.dir))),true);
+}));
+window.addEventListener('resize',()=>requestAnimationFrame(()=>{setActive();loop()}));
+
+/* Autoplay: moves one photo every 3.5 s. Pauses while the mouse is over the carousel, for 5 s after a swipe or tap,
+   while a photo is open, while the menu is open or the tab is hidden, and when the visitor stops it. */
+const autoBtn=$('#autoBtn'),carousel=$('.carousel');
+const PAUSE_ICO='<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14"/><rect x="14" y="5" width="4" height="14"/></svg>';
+const PLAY_ICO='<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 5l12 7-12 7z"/></svg>';
+let userPaused=matchMedia('(prefers-reduced-motion: reduce)').matches,hover=false,focusIn=false,lastTouch=0;
+function renderAutoBtn(){autoBtn.innerHTML=userPaused?PLAY_ICO+'<span>Zaženi drsenje</span>':PAUSE_ICO+'<span>Ustavi drsenje</span>'}
+renderAutoBtn();
+autoBtn.addEventListener('click',()=>{userPaused=!userPaused;lastTouch=0;renderAutoBtn()});
+carousel.addEventListener('pointerenter',e=>{if(e.pointerType==='mouse')hover=true});
+carousel.addEventListener('pointerleave',e=>{if(e.pointerType==='mouse')hover=false});
+['pointerdown','touchstart','wheel'].forEach(t=>carousel.addEventListener(t,()=>{lastTouch=Date.now()},{passive:true}));
+carousel.addEventListener('focusin',()=>{focusIn=true});
+carousel.addEventListener('focusout',e=>{if(!carousel.contains(e.relatedTarget))focusIn=false});
+setInterval(()=>{
+ if(userPaused||hover||focusIn||Date.now()-lastTouch<5000||document.hidden||!track.clientWidth)return;
+ if($('#lb').open||!$('#menu').hidden)return;
+ const list=items(),cur=list.findIndex(it=>it.classList.contains('is-active'));
+ centerOn(Math.min(list.length-1,(cur<0?N:cur)+1),true);
+},3500);
+
+/* ---------- Views and menu ---------- */
+const VIEWS=['domov','o-meni','storitve','projekti','kontakt'];
+const menu=$('#menu'),menuBtn=$('#menuBtn');
+function openMenu(){menu.hidden=false;menuBtn.setAttribute('aria-expanded','true');document.documentElement.style.overflow='hidden';const cur=$('.menu-nav a[aria-current="page"]')||$('.menu-nav a');cur.focus()}
+function closeMenu(returnFocus){if(menu.hidden)return;menu.hidden=true;menuBtn.setAttribute('aria-expanded','false');document.documentElement.style.overflow='';if(returnFocus)menuBtn.focus()}
+menuBtn.addEventListener('click',openMenu);
+$('#menuClose').addEventListener('click',()=>closeMenu(true));
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!menu.hidden)closeMenu(true)});
+function go(name,initial){
+ if(!VIEWS.includes(name))name='domov';
+ $$('.view').forEach(v=>v.hidden=v.dataset.view!==name);
+ $$('.menu-nav a').forEach(a=>a.dataset.go===name?a.setAttribute('aria-current','page'):a.removeAttribute('aria-current'));
+ closeMenu(false);
+ if(!initial){
+  window.scrollTo(0,0);
+  const h=$(`.view[data-view="${name}"] h1`);if(h){h.setAttribute('tabindex','-1');h.focus({preventScroll:true})}
+ }
+ requestAnimationFrame(()=>{paintAll();if(name==='domov')placeCarousel()});
+}
+document.addEventListener('click',e=>{
+ if(e.target.closest('[data-noop]')){e.preventDefault();return}
+ const a=e.target.closest('[data-go]');
+ if(a){e.preventDefault();if(a.dataset.service){const s=$('#f-vrsta');if(s)s.value=a.dataset.service}go(a.dataset.go);try{history.replaceState(null,'','#'+a.dataset.go)}catch(_){}return}
+ const op=e.target.closest('[data-open]');if(op)openLb(byId[op.dataset.open]);
+});
+
+/* ---------- Lightbox ---------- */
+const lb=$('#lb'),lbPh=$('#lbPh');
+function openLb(p){
+ if(!p)return;
+ lbPh.dataset.scene=p.scene;lbPh.dataset.seed=p.seed;
+ if(p.meteors)lbPh.dataset.meteors=p.meteors;else delete lbPh.dataset.meteors;
+ if(p.plain)lbPh.dataset.plain='1';else delete lbPh.dataset.plain;
+ $('#lbTitle').textContent=p.title;$('#lbDesc').textContent=p.desc;$('#lbMeta').textContent=p.year+' · '+p.exif;
+ try{lb.showModal()}catch(_){lb.setAttribute('open','')}
+ requestAnimationFrame(()=>paint(lbPh,true));
+}
+function closeLb(){try{lb.close()}catch(_){lb.removeAttribute('open')}}
+$('#lbClose').addEventListener('click',closeLb);
+lb.addEventListener('click',e=>{if(e.target===lb)closeLb()});
+if(ro)ro.observe(lbPh);
+
+/* ---------- Form ---------- */
+const form=$('#form'),done=$('#formDone');
+const rules=[
+ ['f-ime','Vpišite ime in priimek.',el=>el.value.trim().length>1],
+ ['f-email','Vpišite veljaven e-poštni naslov, npr. ime@domena.si.',el=>/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(el.value.trim())],
+ ['f-sporocilo','Sporočilo naj ima vsaj 10 znakov.',el=>el.value.trim().length>=10],
+ ['f-soglasje','Za odgovor potrebujem vaše soglasje.',el=>el.checked]
+];
+function check(id,msg,test){const el=$('#'+id),bad=!test(el);el.setAttribute('aria-invalid',String(bad));$('#'+id+'-err').textContent=bad?msg:'';return !bad}
+form.addEventListener('submit',e=>{
+ e.preventDefault();
+ let first=null;
+ rules.forEach(([id,msg,t])=>{if(!check(id,msg,t)&&!first)first=$('#'+id)});
+ if(first){first.focus();return}
+ $('#doneName').textContent=$('#f-ime').value.trim().split(/\s+/)[0];
+ $('#formWrap').hidden=true;done.hidden=false;done.focus();
+});
+rules.forEach(([id,msg,t])=>{const el=$('#'+id);el.addEventListener(el.type==='checkbox'?'change':'input',()=>{if(el.getAttribute('aria-invalid')==='true')check(id,msg,t)})});
+$('#newMsg').addEventListener('click',()=>{form.reset();rules.forEach(([id])=>{$('#'+id).removeAttribute('aria-invalid');$('#'+id+'-err').textContent=''});done.hidden=true;$('#formWrap').hidden=false;$('#f-ime').focus()});
+
+/* ---------- Copy e-mail ---------- */
+$('#copyMail').addEventListener('click',function(){
+ const btn=this,txt=$('#mail').textContent;
+ const reset=()=>setTimeout(()=>btn.textContent='Kopiraj',1600);
+ const fallback=()=>{const s=window.getSelection(),rg=document.createRange();rg.selectNodeContents($('#mail'));s.removeAllRanges();s.addRange(rg);btn.textContent='Označeno';reset()};
+ try{navigator.clipboard.writeText(txt).then(()=>{btn.textContent='Kopirano';reset()},fallback)}catch(_){fallback()}
+});
+
+/* ---------- WordPress block overlay ---------- */
+$('#wpToggle').addEventListener('click',function(){
+ const on=document.body.classList.toggle('show-wp');
+ this.setAttribute('aria-pressed',String(on));
+ this.textContent=on?'Skrij WordPress bloke':'Pokaži WordPress bloke';
+});
+
+go((location.hash||'').slice(1),true);
+})();
+</script>
+
+</body></html>
